@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.116);
+}
+/* Titulo */
+.title {
+    text-align: center;
+}
+.title h1 {
+    padding: 10px;
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+/* Add tarefas */
+.tarefas {
+    padding-top: 2%;
+    flex-flow: row wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.tarefas input {
+    padding: 10px;
+    width: 600px;
+    height: 120px;
+    border-right: none;
+    text-indent: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+input {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.tarefas button {
+    text-align: center;
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+    background-color: #55fa6ebe;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.tarefas button:hover {
+    background-color: #3fbd52be;
+}
+
+/* Tarefas adicionadas parte 1 */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 55%;
+    margin: auto auto;
+    padding-top: 40px;
+}
+main .item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    margin-bottom: 12px;
+}
+main .item .item-icone {
+    flex: 20%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+main .item .item-nome {
+    flex: 60%;
+    text-indent: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+main .item .item-botao {
+    flex: 20%;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+main .item .item-botao:hover {
+    background-color: rgb(201, 12, 12);
+}
+main .item .item-botao button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 0.9rem;
+    color: white;
+}
+main .item .item-botao button i {
+    padding-right: 2px;
+}
+
+/* Tarefas adicionas parte 2 */
+main .item .item-icone .bi-check-circle-fill {
+    font-size: 1.2rem;
+    color: green;
+}
+main .item.clicado  {
+    background-color: rgba(0, 128, 0, 0.274);
+}
+main .item.item.clicado .item-nome {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.800);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .title h1 {
+        font-size: 1.4rem;
+    }
+
+    .tarefas input {
+        width: 500px;
+        height: 100px;
+    }
+    input {
+        font-size: 1rem;
+    }
+    .tarefas button {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: 79%;
+    }
+    main .item .item-nome {
+        font-size: 1.2rem;
+    }
+    main .item .item-botao button {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .tarefas {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+    }
+    .tarefas input {
+        width: 250px;
+        height: 80px;
+    }
+    input {
+        font-size: 0.8rem;
+    }
+    .tarefas button {
+        width: 100px;
+        height: 80px;
+        font-size: 0.75rem;
+    }
+
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        height: 120px;
+    }
+    main .item {
+        display: flex;
+        flex-flow: row wrap;
+        height: 100px;
+    }
+    main .item .item-icone {
+        font-size: 1.1rem;
+    }
+    main .item .item-nome {
+        font-size: 1rem;
+    }
+    main .item .item-botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
